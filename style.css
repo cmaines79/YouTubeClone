@@ -124,7 +124,7 @@ input {
 
 /* START FEATURED VIDEO */
 .featured-video {
-  width: 76%;
+  width: 70%;
   padding-top: 24px;
   padding-right: 24px;
   margin-left: 24px;
@@ -269,16 +269,62 @@ input {
   width: 100%;
 }
 
+.comment-header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+
+.comment-stats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.comment-stats p {
+  font-size: 16px;
+  margin-right: 32px;
+}
+
+.comment-stats a {
+  text-decoration: none;
+  color: black;
+  margin-right: 5px;
+}
+
+.comment-stats a p {
+  font-size: 14px;
+}
+
+.add-comment {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.add-comment img {
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+
+.add-comment input {
+  width: calc(100% - 60px);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+}
+
 /* END COMMENTS */
 
 /* END FEATURED VIDEO */
 
 /* START RECOMMENDED VIDEOS */
 .recommended-videos {
-  width: 24%;
+  width: 30%;
   padding-top: 24px;
   padding-right: 24px;
-  background-color: red;
 }
 
 .related-buttons {
@@ -305,9 +351,83 @@ input {
   background-color: black;
 }
 
+/* START RELATED VIDEOS */
+.related-videos-container {
+  display: flex;
+  flex-direction: column;
+}
+.related-videos {
+  display: flex;
+}
+
+.related-video {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.video-length {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 5px;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+}
+
+.video-length p {
+  font-size: 12px;
+}
+
 .related-video a img {
   height: 94px;
   width: 168px;
 }
+
+.related-video-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 5px;
+  position: relative;
+}
+
+.related-video-title {
+  padding-right: 10px;
+}
+
+.related-video-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.related-video-creator {
+  display: flex;
+  flex-direction: column;
+}
+
+.related-video-creator a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+.related-video-creator a img {
+  width: 14px;
+  height: 14px;
+}
+
+.three-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  /* visibility: hidden; */
+}
+
+/* END RELATED VIDEOS */
+
 /* END RECOMMENDED VIDEOS */
 /* END CONTAINER */

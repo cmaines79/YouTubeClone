@@ -21,3 +21,8 @@ window.addEventListener('resize', () => {
     // set the hero-video-div height and width (width is set in CSS)
     heroVideoDivElement.style.height = 0.5625 * heroVideoDivElement.offsetWidth + "px";
 })
+
+const relatedVideosElemenet = document.getElementById('RV1');
+relatedVideosElemenet.addEventListener('mouseover', (e) => {
+    // console.log(e.target);
+})
