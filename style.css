@@ -315,6 +315,64 @@ input {
   border-bottom: 1px solid black;
   font-size: 14px;
 }
+.public-comments {
+  display: flex;
+}
+
+.commentor-img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.commentor p {
+  font-size: 13px;
+}
+
+.commentor p span {
+  font-size: 14px;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+.comment-text {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.comment-social {
+  display: flex;
+  align-items: center;
+}
+
+.comment-social p {
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.comment-btn {
+  width: 32px;
+  height: 32px;
+}
+
+.comment-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+.view-more-comments {
+  display: flex;
+  align-items: center;
+}
+
+.view-more-comments a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  color: #065fd4;
+}
 
 /* END COMMENTS */
 
