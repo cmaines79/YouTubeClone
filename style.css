@@ -261,6 +261,14 @@ input {
   font-size: 14px;
   line-height: 1.8rem;
 }
+
+/* START COMMENTS */
+.comments-container {
+  width: 100%;
+}
+
+/* END COMMENTS */
+
 /* END FEATURED VIDEO */
 
 /* START RECOMMENDED VIDEOS */
@@ -268,6 +276,24 @@ input {
   width: 24%;
   padding-top: 24px;
   padding-right: 24px;
+}
+
+.related-buttons {
+  width: 100%;
+  overflow: hidden;
+}
+.related-btn {
+  padding: 7px 12px;
+  margin: 8px;
+  margin-left: 0px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background-color: #e0e0e0;
+  font-size: 14px;
+}
+.active-related-btn {
+  color: white;
+  background-color: black;
 }
 /* END RECOMMENDED VIDEOS */
 /* END CONTAINER */
