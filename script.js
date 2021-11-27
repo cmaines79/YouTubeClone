@@ -138,11 +138,42 @@ const populateSampleComments = () => {
         </div>
         `
         temp += output;
-    })
-    console.log(temp);
-    
+    })  
     publicCommentsElement.innerHTML = temp;
+}
 
+const populateSampleRelatedVideos = () => {
+    const recommendedVideosElement = document.getElementById('recommended-videos');
+    let output = ""
+    relatedVideos.forEach((video) => {
+        output += `
+            <div class="related-videos">
+                <div class="related-video">
+                    <a href="#">
+                        <img src=${video.thumbnailURL} alt="">
+                    </a>
+                    <div class="video-length">
+                        <p>${video.time}</p>
+                    </div>
+                </div>
+                <div class="related-video-details">
+                    <div class="related-video-title">
+                        <a href="#">${video.title}</a>
+                    </div>
+                    <div class="related-video-creator">
+                        <a href="#">${video.creator} <img src="/img/check-circle.svg" alt="Verified"></a>
+                        <a href="#">${video.views} Views <span>•</span> ${video.age}</a>
+                    </div>
+                    <div class="three-dot">
+                        <a href="#">
+                            <img src="/img/dots-vertical.svg" alt="More">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        `
+    });
+    recommendedVideosElement.innerHTML = output;
 }
 
 // setting the intial size of the iframe and parent elements

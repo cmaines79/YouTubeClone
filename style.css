@@ -315,13 +315,15 @@ input {
   border-bottom: 1px solid black;
   font-size: 14px;
 }
+
 .public-comments {
   display: flex;
+  flex-direction: column;
 }
 
 .comment-content {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 16px;
 }
 
 .commentor-img img {
