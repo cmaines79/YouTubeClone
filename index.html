@@ -55,7 +55,7 @@
     </header>
     <div class="container">
         <div class="featured-video" id="featured-video-div">
-            <div class="hero-video" id="hero-video-div">
+            <div class="hero-video loading" id="hero-video-div">
                     <iframe id="video-iframe"src="https://www.youtube.com/embed/P7t13SGytRk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="hero-video-details">
@@ -129,25 +129,24 @@
                         </div>
                     </div>
                 </div>
-                <div class="comments-container">
-                    <div class="comment-header">
-                        <div class="comment-stats">
-                            <p>541 Comments</p>
-                            <a href="#">
-                                <img src="/img/sort-variant.svg" alt="sort-variant">
-                            </a>
-                            <a href="#">
-                                <p>SORT BY</p>
-                            </a>
-                        </div>
-                        <div class="add-comment">
-                            <img src="/img/account-circle.svg" alt="account">
-                            <input type="text" id="add-a-comment" value="Add a public comment...">
-                        </div>
+            </div>
+            <div class="comments-container" id="full-screen-comments">
+                <div class="comment-header">
+                    <div class="comment-stats">
+                        <p>541 Comments</p>
+                        <a href="#">
+                            <img src="/img/sort-variant.svg" alt="sort-variant">
+                        </a>
+                        <a href="#">
+                            <p>SORT BY</p>
+                        </a>
                     </div>
-                    <div class="public-comments" id="public-comments">
+                    <div class="add-comment">
+                        <img src="/img/account-circle.svg" alt="account">
+                        <input type="text" id="add-a-comment" value="Add a public comment...">
                     </div>
-
+                </div>
+                <div class="public-comments" id="public-comments">
                 </div>
             </div>
         </div>
@@ -159,7 +158,29 @@
                 <button class="related-btn">More from Traversy Media</button>
                 <button class="related-btn">Watched</button>
             </div>
-            <div class="related-videos-container">
+            <div class="related-videos-container" id="related-videos-container">
+            </div>
+            <div class="show-more-videos">
+                <button id="show-more-videos-button">SHOW MORE</button>
+            </div>
+        </div>
+        <div hidden class="comments-container" id="mobile-screen-comments">
+            <div class="comment-header">
+                <div class="comment-stats">
+                    <p>541 Comments</p>
+                    <a href="#">
+                        <img src="/img/sort-variant.svg" alt="sort-variant">
+                    </a>
+                    <a href="#">
+                        <p>SORT BY</p>
+                    </a>
+                </div>
+                <div class="add-comment">
+                    <img src="/img/account-circle.svg" alt="account">
+                    <input type="text" id="add-a-comment" value="Add a public comment...">
+                </div>
+            </div>
+            <div class="public-comments" id="public-comments-mobile">
             </div>
         </div>
     </div>

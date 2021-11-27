@@ -1,5 +1,7 @@
 const featuredVideoDivElement = document.getElementById('featured-video-div');
 const heroVideoDivElement = document.getElementById('hero-video-div');
+const fullScreenCommentsElement = document.getElementById('full-screen-comments');
+const mobileScreenCommentsElement = document.getElementById('mobile-screen-comments');
 
 const comments = [
     {
@@ -103,6 +105,7 @@ const relatedVideos = [
 
 const populateSampleComments = () => {
     const publicCommentsElement = document.getElementById('public-comments');
+    const publicCommentsMobileElement = document.getElementById('public-comments-mobile');
     let temp = "";
     comments.forEach((comment) => {
         let output = `
@@ -139,11 +142,14 @@ const populateSampleComments = () => {
         `
         temp += output;
     })  
+
+    // populate both comment sections depending on mobile or fullscreen media queries
     publicCommentsElement.innerHTML = temp;
+    publicCommentsMobileElement.innerHTML = temp;
 }
 
 const populateSampleRelatedVideos = () => {
-    const recommendedVideosElement = document.getElementById('recommended-videos');
+    const recommendedVideosElement = document.getElementById('related-videos-container');
     let output = ""
     relatedVideos.forEach((video) => {
         output += `
@@ -164,15 +170,12 @@ const populateSampleRelatedVideos = () => {
                         <a href="#">${video.creator} <img src="/img/check-circle.svg" alt="Verified"></a>
                         <a href="#">${video.views} Views <span>•</span> ${video.age}</a>
                     </div>
-                    <div class="three-dot">
-                        <a href="#">
-                            <img src="/img/dots-vertical.svg" alt="More">
-                        </a>
-                    </div>
                 </div>
             </div>
         `
     });
+
+    output += output + output;
     recommendedVideosElement.innerHTML = output;
 }
 
@@ -193,14 +196,22 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('resize', () => {
     // will also need some logic here to know if the window size is at a media threshold and to change the flex from row to column
     
-    // set the featured-video-div height and width (width is set in CSS)
-    featuredVideoDivElement.style.height = 0.5625 * featuredVideoDivElement.offsetWidth + "px";
-    
-    // set the hero-video-div height and width (width is set in CSS)
-    heroVideoDivElement.style.height = 0.5625 * heroVideoDivElement.offsetWidth + "px";
-})
+    if(window.innerWidth > 1015) {
+        // window is full screen
 
-const relatedVideosElemenet = document.getElementById('RV1');
-relatedVideosElemenet.addEventListener('mouseover', (e) => {
-    // console.log(e.target);
+        fullScreenCommentsElement.removeAttribute('hidden');
+        mobileScreenCommentsElement.setAttribute('hidden', 'true');
+
+        // set the featured-video-div height and width (width is set in CSS)
+        featuredVideoDivElement.style.height = 0.5625 * featuredVideoDivElement.offsetWidth + "px";
+        
+        // set the hero-video-div height and width (width is set in CSS)
+        heroVideoDivElement.style.height = 0.5625 * heroVideoDivElement.offsetWidth + "px";
+    } else {
+        // window is mobile
+        fullScreenCommentsElement.setAttribute('hidden', 'true');
+        mobileScreenCommentsElement.removeAttribute('hidden');
+    }
+    
+    
 })
